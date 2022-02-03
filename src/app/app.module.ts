@@ -31,6 +31,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CuscuzListComponent } from './components/cuscuz/cuscuz-list/cuscuz-list.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -40,7 +41,8 @@ import { CuscuzListComponent } from './components/cuscuz/cuscuz-list/cuscuz-list
     NavComponent,
     HomeComponent,
     HeaderComponent,
-    CuscuzListComponent
+    CuscuzListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
