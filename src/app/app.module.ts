@@ -30,6 +30,7 @@ import { MatCardModule } from '@angular/material/card';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CuscuzListComponent } from './components/cuscuz/cuscuz-list/cuscuz-list.component';
 
 
 
@@ -38,7 +39,8 @@ import { HeaderComponent } from './components/header/header.component';
     AppComponent,
     NavComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    CuscuzListComponent
   ],
   imports: [
     BrowserModule,
