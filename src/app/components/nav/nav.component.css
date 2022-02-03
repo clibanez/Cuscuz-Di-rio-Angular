@@ -5,8 +5,8 @@
 .sidenav {
   width: 13rem;
   color: white;
-  background: rgb(43,43,40);
-  background: linear-gradient(101deg, rgba(43,43,40,1) 58%, rgba(76,77,70,0.728695652173913) 100%);
+  background: rgb(53,98,64);
+background: linear-gradient(101deg, rgba(53,98,64,1) 22%, rgba(116,231,70,0.728695652173913) 100%, rgba(159,251,121,0.728695652173913) 100%);
 }
 img{
   width: 80%;
@@ -23,6 +23,6 @@ img{
 
 .menu{
   margin: 1rem 0 0 1rem;
-  background: rgb(220,222,62);
-background: linear-gradient(101deg, rgba(220,222,62,1) 88%, rgba(232,245,35,0.728695652173913) 95%);
+  background: rgb(53,98,64);
+background: linear-gradient(101deg, rgba(53,98,64,1) 22%, rgba(116,231,70,0.728695652173913) 100%, rgba(159,251,121,0.728695652173913) 100%);
 }

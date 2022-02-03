@@ -1,8 +1,8 @@
 <mat-drawer-container class="container" autosize>
-  <mat-drawer #drawer class="sidenav mat-elevation-z10" mode="side">
+  <mat-drawer #drawer class="sidenav mat-elevation-z8" mode="side">
    <!-- <img src="" alt="Imagem de navegação">-->
   <mat-nav-list class="nav-list">
-  <a mat-list-item routerLink="/">
+  <a mat-list-item routerLink="home">
     <i class="material-icons">home</i>
     Home
   </a>
@@ -22,9 +22,10 @@
   </mat-drawer>
 
   <div class="sidenav-content">
-    <button class="menu mat-elevation-z10" (click)="drawer.toggle()" mat-icon-button>
+    <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
       <mat-icon>menu</mat-icon>
     </button>
+    <router-outlet></router-outlet>
   </div>
 
 </mat-drawer-container>
