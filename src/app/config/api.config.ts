@@ -1,3 +1,3 @@
 export const API_CONFIG = {
-  baseUrl : 'https://clibanez-cucuz-diario.herokuapp.com'
+  baseUrl : 'https://clibanez-cuscuz-diario.herokuapp.com'
 }
