@@ -1,5 +1,13 @@
 <div class="container">
 
+  <button class="mat-elevation-z8" mat-stroked-button color="primary">Novo Cuscuz</button>
+
+  <mat-form-field appearance="standard">
+    <mat-label>Busca pelo titulo</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+
+  <h1>Listando Cuscuz</h1>
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource">

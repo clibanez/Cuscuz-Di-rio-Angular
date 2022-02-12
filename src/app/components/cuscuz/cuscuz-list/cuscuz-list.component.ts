@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Cuscuz } from '../../../models/cuscuz';
+import { CuscuzService } from '../../../services/cuscuz.service';
 
 @Component({
   selector: 'app-cuscuz-list',
@@ -10,32 +11,39 @@ import { Cuscuz } from '../../../models/cuscuz';
 })
 export class CuscuzListComponent implements OnInit {
 
-  ELEMENT_DATA: Cuscuz[] = [
-{
-    id: 1,
-    titulo: 'GÊNESIS',
-    texto: 'hduhduhd dudhuhduhddu ddududoododoe',
-    dataCriacao: '05/02/2022'
-}
-  ]
+  ELEMENT_DATA: Cuscuz[] = []
 
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<Cuscuz>(this.ELEMENT_DATA);
 
-  constructor() { }
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  constructor(
+    private service: CuscuzService
+  ) { }
 
   ngOnInit(): void {
+    this.findAll();
+
   }
-
-
-  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
 
+  findAll() {
+    this.service.findAll().subscribe(resposta => {
+         this.ELEMENT_DATA = resposta
+         this.dataSource = new MatTableDataSource<Cuscuz>(resposta);
+         this.dataSource.paginator = this.paginator;
+    })
 
+  }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 
 
 }
