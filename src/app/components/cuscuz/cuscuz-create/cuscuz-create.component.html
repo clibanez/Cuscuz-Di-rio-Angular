@@ -1,1 +1,40 @@
-<p>cuscuz-create works!</p>
+<div class="container mat-elevation-z8">
+
+  <form class="form">
+    <h1 class="fullWidth"> Criação do Cuscuz</h1>
+    <!--img class="fullWidth" src="assets/img/nome da imagem" alt="Cuscuz A palavra de Deus no seu café da manhã"-->
+
+    <h2>Título</h2>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Digite o título</mat-label>
+        <input
+        [formControl]="titulo"
+        required
+        matInput
+        placeholder="Ex.. Titulo do cuscuz"
+        maxlength="20">
+        <mat-icon matSuffix>create</mat-icon>
+      </mat-form-field>
+
+
+    <h2>Texto</h2>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Digite o texto</mat-label>
+        <textarea
+        [formControl]="texto"
+        required
+        matInput
+        placeholder="Ex.. Texto do cuscuz"
+        maxlength="1600">Texto Cuscuz</textarea>
+        <mat-icon matSuffix>menu_bookcreate</mat-icon>
+      </mat-form-field>
+
+      <button [disabled]="!validaCampos()" class="fullWidth mat-elevation-z8" mat-flat-button color="primary">Criar</button>
+      <button routerLink="../" class="fullWidth mat-elevation-z8" mat-stroked-button color="warn">Cancelar</button>
+  </form>
+  <p class="fullWidth">
+   Começando o dia com a palavra de Deus
+  </p>
+
+</div>

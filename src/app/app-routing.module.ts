@@ -5,13 +5,16 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { CuscuzListComponent } from './components/cuscuz/cuscuz-list/cuscuz-list.component';
 import { LoginComponent } from './components/login/login.component';
+import { CuscuzCreateComponent } from './components/cuscuz/cuscuz-create/cuscuz-create.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent },
   {
     path: '', component:NavComponent,canActivate: [AuthGuard], children: [
       {path: 'home', component: HomeComponent},
-      {path: 'cuscuz', component: CuscuzListComponent}
+
+      {path: 'cuscuz', component: CuscuzListComponent},
+      {path: 'cuscuz/create', component: CuscuzCreateComponent}
     ]
   }
 ];
