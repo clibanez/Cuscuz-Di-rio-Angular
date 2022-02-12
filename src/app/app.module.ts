@@ -34,6 +34,7 @@ import { CuscuzListComponent } from './components/cuscuz/cuscuz-list/cuscuz-list
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
+import { CuscuzCreateComponent } from './components/cuscuz/cuscuz-create/cuscuz-create.component';
 
 
 
@@ -44,7 +45,8 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
     HomeComponent,
     HeaderComponent,
     CuscuzListComponent,
-    LoginComponent
+    LoginComponent,
+    CuscuzCreateComponent
   ],
   imports: [
     BrowserModule,
