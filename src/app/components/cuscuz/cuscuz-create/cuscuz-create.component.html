@@ -6,31 +6,36 @@
 
     <h2>Título</h2>
 
-      <mat-form-field appearance="legacy">
+      <mat-form-field
+      class="fullWidth" appearance="legacy">
         <mat-label>Digite o título</mat-label>
         <input
+        [(ngModel)]="cuscuz.titulo"
+        name="titulo"
         [formControl]="titulo"
         required
         matInput
         placeholder="Ex.. Titulo do cuscuz"
-        maxlength="20">
+        maxlength="50">
         <mat-icon matSuffix>create</mat-icon>
       </mat-form-field>
 
-
+      <mat-icon class="fullWidth" matSuffix>menu_bookcreate</mat-icon>
     <h2>Texto</h2>
-      <mat-form-field class="example-full-width" appearance="fill">
+      <mat-form-field class="full-width" appearance="fill">
         <mat-label>Digite o texto</mat-label>
         <textarea
+        [(ngModel)]="cuscuz.texto"
+        name="texto"
         [formControl]="texto"
         required
         matInput
         placeholder="Ex.. Texto do cuscuz"
         maxlength="1600">Texto Cuscuz</textarea>
-        <mat-icon matSuffix>menu_bookcreate</mat-icon>
+
       </mat-form-field>
 
-      <button [disabled]="!validaCampos()" class="fullWidth mat-elevation-z8" mat-flat-button color="primary">Criar</button>
+      <button  (click)="create()"   [disabled]="!validaCampos()" class="fullWidth mat-elevation-z8" mat-flat-button color="primary">Criar</button>
       <button routerLink="../" class="fullWidth mat-elevation-z8" mat-stroked-button color="warn">Cancelar</button>
   </form>
   <p class="fullWidth">
@@ -38,3 +43,23 @@
   </p>
 
 </div>
+
+<!--
+  <div class="container mat-elevation-z8">
+  <h1>Criando chamado</h1>
+  <img class="full-Width" src="assets/img/chamado-create.svg" alt="Chamado image">
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+  </form>
+
+</div>
+-->

@@ -13,7 +13,7 @@ h1,p{
 }
 /*
 img {
-  height: 8rem;
+  height: 12rem;
   margin: auto;
 
 */
@@ -30,3 +30,40 @@ p{
   margin-top: 4rem;
   opacity: .5;
 }
+.full{
+  width: 10rem;
+
+}
+
+/*
+.container {
+  width: 40%;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.full-Width {
+  width: 100%;
+}
+
+h1, img {
+  text-align: center;
+
+}
+
+img {
+  height: 15rem;
+
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+*/

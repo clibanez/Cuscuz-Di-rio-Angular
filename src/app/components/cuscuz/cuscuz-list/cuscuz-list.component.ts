@@ -9,7 +9,9 @@ import { CuscuzService } from '../../../services/cuscuz.service';
   templateUrl: './cuscuz-list.component.html',
   styleUrls: ['./cuscuz-list.component.css']
 })
+
 export class CuscuzListComponent implements OnInit {
+
 
   ELEMENT_DATA: Cuscuz[] = []
 
