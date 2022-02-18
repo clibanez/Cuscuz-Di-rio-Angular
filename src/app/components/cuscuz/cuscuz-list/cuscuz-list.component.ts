@@ -15,8 +15,8 @@ export class CuscuzListComponent implements OnInit {
 
   ELEMENT_DATA: Cuscuz[] = []
 
-
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+position
+  displayedColumns: string[] = ['id', 'titulo', 'texto', 'dataCriacao', 'acoes'];
   dataSource = new MatTableDataSource<Cuscuz>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
